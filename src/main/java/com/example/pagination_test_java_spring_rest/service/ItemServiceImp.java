@@ -33,7 +33,7 @@ public class ItemServiceImp implements ItemService{
         int first = last - pageable.getPageSize();
 
         if (list.size() < first) {
-            throw new RequestException(first+ " " + last);
+            throw new RequestException("Items not found");
         } else if (list.size() < last) {
             last = list.size();
         }
