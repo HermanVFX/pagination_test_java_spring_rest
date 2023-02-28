@@ -40,8 +40,6 @@ public class ItemServiceImp implements ItemService{
 
         Page<Item> page = new PageImpl<>(list.subList(first, last), pageable, list.size());
 
-        System.out.println(page);
-
         return page;
     }
 }
